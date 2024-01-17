@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #292b2f;
+    color: #eee;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    font-weight: bold;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #0e1111;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* Increased margin-top for more space at the top */
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 45px;
+    color: #eee;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a.active a::before,
+.overlay a:hover::before {
+    width: 100%;
+    background-color: #525CEB;
+}
+
+.overlay a.active,
+.overlay a:hover {
+    color: #525CEB;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.burger {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 40px;
+    color: #eee;
+    position: fixed; /* Add position: fixed to keep it in place */
+    z-index: 1; /* Set a higher z-index to make sure it's above other elements */
+    top: 40px;
+    left: 0;
+    transition: ease-in-out 0.3s;
+}
+
+.title-container {
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    border-radius: 100px;
+    padding: 5px 50px;
+    left: 50%; /* Center the title container */
+    transform: translateX(-50%); /* Center the title container */
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.title {
+    font-size: 50px;
+    color: #eee;
+    margin: 0;
+}
+
+.line {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #eee; /* Change color as needed */
+    transition: width 1s ease-in-out;
+    top: 130px; /* Adjust the top position to align with the burger and title container */
+}
+
+#mark, #mark1 {
+    display: inline-block;
+    opacity: 0; /* Initially hide the spans */
+    font-size: 50px; /* Adjust font size as needed */
+    color: #525CEB;
+    transition: ease-in-out 0.3s;
+  }
+
+.burger:hover {
+    color: #525CEB;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px);
+}
+
+.about-content {
+    max-width: 1500px;
+    padding: 100px;
+    text-align: center;
+    margin-top: 170px;
+}
+
+h1, h2 {
+    color: #525CEB;
+}
+
+.description {
+    font-size: 45px;
+    white-space: pre-line;
+}
+
+.description-indicator {
+    margin-bottom: 10px;
+}
+
+.tap-to-continue {
+    display: none;
+    text-align: center;
+    color: #000; /* Black text color */
+    font-size: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff; /* White background color */
+    transition: ease-in-out 0.2s;
+    border: 3px solid #525CEB;
+
+}
+
+.tap-to-continue:hover {
+    color: #eee;
+    cursor: pointer;
+    background-color: #525CEB;
+}
+
+.confirmation-button {
+    cursor: pointer;
+}
+
+.yes-button {
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 5px 10px;
+    transition: ease-in-out 0.2s;
+}
+
+.no-button {
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 5px 13px;
+    transition: ease-in-out 0.2s;
+}
+
+.yes-button:hover {
+    color: #eee; /* Green */
+    background-color: #525CEB;
+}
+
+.no-button:hover {
+    color: #eee; /* Green */
+    background-color: #525CEB;
+}
+
+.confirmation-text strong {
+    font-weight: bold;
+    font-size: 35px; /* Adjust the font size as needed */
+}
+
+.confirmation-button {
+    font-size: 20px; /* Adjust the font size as needed */
+}

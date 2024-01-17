@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #292b2f;
+  color: #eee;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  font-weight: bold;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #0e1111;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px; /* Increased margin-top for more space at the top */
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 45px;
+  color: #eee;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a.active a::before,
+.overlay a:hover::before {
+  width: 100%;
+  background-color: #525CEB;
+}
+
+.overlay a.active,
+.overlay a:hover {
+  color: #525CEB;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.burger {
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 40px;
+  color: #eee;
+  position: fixed; /* Add position: fixed to keep it in place */
+  z-index: 1; /* Set a higher z-index to make sure it's above other elements */
+  top: 40px;
+  left: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.title-container {
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  border-radius: 100px;
+  padding: 5px 50px;
+  left: 50%; /* Center the title container */
+  transform: translateX(-50%); /* Center the title container */
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.title {
+  font-size: 50px;
+  color: #eee;
+  margin: 0;
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #eee; /* Change color as needed */
+  transition: width 1s ease-in-out;
+  top: 130px; /* Adjust the top position to align with the burger and title container */
+}
+
+#mark, #mark1 {
+  display: inline-block;
+  opacity: 0; /* Initially hide the spans */
+  font-size: 50px; /* Adjust font size as needed */
+  color: #525CEB;
+  transition: ease-in-out 0.3s;
+}
+
+.burger:hover {
+  color: #525CEB;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+      font-size: 20px;
+  }
+  .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+  }
+}
+
+.description1 {
+  text-align: center;
+  max-width: 1000px;
+  margin-left: 450px;
+  margin-top: 200px;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-container {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  padding: 30px 30px 20px 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 0px 5px #525CEB;
+  margin-top: 350px;
+  margin-left: 730px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.category3 {
+font-size: 24px;
+color: #525CEB;
+margin-bottom: 30px;
+font-weight: bold;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.category1, .category2 {
+font-size: 24px;
+color: #525CEB;
+margin-bottom: 30px;
+margin-right: 40px;
+font-weight: bold;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.category-title {
+margin-bottom: 10px;
+}
+
+.skill p {
+width: 100px;
+height: 50px;
+border-radius: 10px;
+border: 2px solid #525CEB;
+background-color: white;
+color: #525CEB;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 16px;
+transition: background-color 0.3s ease;
+margin-bottom: 30px;
+}
+
+/* Apply the animation to the hover state */
+.skill:hover p {
+  animation: colorChange 2s infinite; /* Change the duration as needed */
+  transform: scale(1.2);
+  background-color: #525CEB;
+  color: white;
+  cursor: pointer;
+}
+
+.skill .logo {
+  display: none;
+  position: absolute;
+}
+
+.html-logo {
+  bottom: -370px;
+  right: -890px;
+  width: 400px;
+  height: 340px;
+} 
+
+.css-logo {
+  bottom: -300px;
+  right: -850px;
+  width: 360px;
+  height: 340px;
+}
+
+.javascript-logo {
+  bottom: -230px;
+  right: -845px;
+  width: 340px;
+  height: 350px;
+}
+
+.python-logo {
+  bottom: -370px;
+  right: -710px;
+  width: 340px;
+  height: 350px;
+}
+
+.java-logo {
+  bottom: -270px;
+  right: -730px;
+  width: 410px;
+  height: 340px;
+}
+
+.mysql-logo {
+  bottom: -180px;
+  right: -680px;
+  width: 360px;
+  height: 250px;
+}
+
+.figma-logo {
+  bottom: -340px;
+  right: -540px;
+  width: 250px;
+  height: 330px;
+}
+
+.github-logo {
+  bottom: -290px;
+  right: -595px;
+  width: 330px;
+  height: 330px;
+}
+
+.androidstudio-logo {
+  bottom: -260px;
+  right: -640px;
+  width: 390px;
+  height: 400px;
+}
+
+/* Apply the animation to the CSS skill when it has the 'active' class */
+#Android-Studio.active p {
+animation: cssAnimation 3s ease; /* Change the duration as needed */
+}
+
+.skill.active p {
+animation: none; /* Remove animation on active state */
+transform: none; /* Remove transform on active state */
+}
+
+

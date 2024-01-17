@@ -1,0 +1,167 @@
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Header */
+nav {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    margin-right: 200px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline */
+    left: 0;
+    width: 0; /* Initially, set the width to 0 for the underline */
+    height: 2px; /* Height of the underline */
+    background-color: transparent; /* Initially transparent */
+    transition: width 0.3s ease; /* Add transition for the width change */
+}
+
+nav ul li.active a::before,
+nav ul li a:hover::before {
+    width: 100%; /* Expand the width to 100% on hover */
+    background-color: #525CEB; /*color of the underline on hover */
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: #525CEB; /* Change text color on hover */
+}
+
+body {
+    background-color: #292b2f;
+    padding: 15px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.sub {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.front {
+    display: flex; 
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* middle part information */
+
+.mypicture {
+    width: 500px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 300px;
+    display: block;
+    box-shadow: 0 0 0px 5px #525CEB; /* Adjust the values for the desired glow effect */
+}
+
+.intro {
+    margin-top: 100px;
+    margin-left: 200px;
+    font-size: 20px; 
+    color: #eee;
+}
+
+.name {
+    font-size: 100px;
+    position: relative;
+}
+
+.tweaking {
+    animation: tweakAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes tweakAnimation {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(10px); /* Adjust the tweak distance as needed */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+
+
+.typing-animation {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: #F2F3F4;
+    font-size: 100px;
+    font-style: bold;
+}
+
+
+/* social media Icons */
+.social-icons {
+    margin-top: 25px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.social-icon {
+    font-size: 35px;
+    margin-right: 15px;
+    color: #7e7171;
+    transition: color 0.5s ease; /* Smooth color transition on hover */
+    text-decoration: none;
+}
+
+.social-icon.facebook:hover {
+    color: #3b5998;
+}
+
+.social-icon.instagram:hover {
+    color: #e4405f;
+}
+
+.social-icon.github:hover {
+    color: #eeeeeee8;
+}
+
+
+
+
