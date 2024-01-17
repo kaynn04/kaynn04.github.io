@@ -193,7 +193,6 @@ margin-bottom: 30px;
 
 /* Apply the animation to the hover state */
 .skill:hover p {
-  animation: colorChange 2s infinite; /* Change the duration as needed */
   transform: scale(1.2);
   background-color: #525CEB;
   color: white;
