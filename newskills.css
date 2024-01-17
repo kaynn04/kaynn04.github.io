@@ -187,13 +187,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 16px;
-transition: background-color 0.3s ease;
 margin-bottom: 30px;
 }
 
 /* Apply the animation to the hover state */
 .skill:hover p {
-  transform: scale(1.2);
   background-color: #525CEB;
   color: white;
   cursor: pointer;
@@ -277,4 +275,46 @@ animation: none; /* Remove animation on active state */
 transform: none; /* Remove transform on active state */
 }
 
+@media screen and (max-width: 1024px) {
+  .description1 {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+
+  .skills-container {
+    margin-top: 150px;
+    margin-left: 10%;
+  }
+
+  .body-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category1,
+  .category2,
+  .category3 {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .skill p {
+    width: 80px;
+    height: 40px;
+  }
+
+  .html-logo,
+  .css-logo,
+  .javascript-logo,
+  .python-logo,
+  .java-logo,
+  .mysql-logo,
+  .figma-logo,
+  .github-logo,
+  .androidstudio-logo {
+    bottom: -200px;
+    right: -500px;
+  }
+}
 
